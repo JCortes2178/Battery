@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 1120234439}
   - component: {fileID: 1120234441}
   - component: {fileID: 1120234442}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,6 +605,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpAmount: 10
+  boxSize: {x: 1.31, y: 0.37}
+  castDistance: 0.94
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &2093069178
 Rigidbody2D:
   serializedVersion: 5
