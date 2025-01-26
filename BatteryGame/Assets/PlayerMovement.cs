@@ -1,9 +1,14 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] public float moveSpeed = 20f;
+    [SerializeField] public float jumpAmount = 10f;
+    public Vector2 boxSize;
+    public float castDistance;
+    public LayerMask groundLayer;
     private Rigidbody2D _rigidbody2D;
     void Start()
     {
@@ -15,7 +20,12 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         _rigidbody2D.linearVelocity = new Vector2(horizontal * moveSpeed, _rigidbody2D.linearVelocity.y);
-        
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        {
+            _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
+        }
+
         //Flip the sprite to match the direction we are facing. Default is right
         if (horizontal > 0)
         {
@@ -26,6 +36,23 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-10, 10, 1);
         }
+    }
 
+    // boolean to tell if the player is on the ground. 
+    public bool isGrounded()
+    {
+        if (Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, groundLayer))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    //No way to see the boxcast in the editor. This will outline it. 
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
     }
 }
