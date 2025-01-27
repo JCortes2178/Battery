@@ -610,7 +610,7 @@ MonoBehaviour:
   castDistance: 0.94
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 16
 --- !u!50 &2093069178
 Rigidbody2D:
   serializedVersion: 5
