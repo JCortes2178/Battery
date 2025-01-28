@@ -606,8 +606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deacccc6ab54482ebf037cc73660d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 1
   jumpAmount: 10
+  dashSpeed: 10
+  dashDuration: 0.2
+  dashCooldown: 1
   boxSize: {x: 1.31, y: 0.37}
   castDistance: 0.94
   groundLayer:
