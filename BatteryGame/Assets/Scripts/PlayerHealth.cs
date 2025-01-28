@@ -14,9 +14,19 @@ public class PlayerHealth : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void LoseHealthDash()
     {
-        
+        LoseHealth(dashCost);
+    }
+
+    public void LoseHealthAttack()
+    {
+        LoseHealth(attackCost);
+    }
+
+    public void LoseHealth(float damage)
+    {
+        health -= damage;
     }
 
     void LoseHealthOverTime()
