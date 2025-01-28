@@ -1,17 +1,34 @@
 using System;
 using NUnit.Framework;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] public float moveSpeed = 20f;
+    [SerializeField] public float moveSpeed = 10f;
     [SerializeField] public float jumpAmount = 10f;
+    
+    //Dash settings
+    [SerializeField] public float dashSpeed = 60f;
+    [SerializeField] public float dashDuration = 1f;
+    [SerializeField] public float dashCooldown = 2f;
+    private float _dashTimeLeft = 0f;
+    private float _lastDashTime = 0f;
+    
     public Vector2 boxSize;
     public float castDistance;
     public LayerMask groundLayer;
     private Rigidbody2D _rigidbody2D;
+
     private bool isFacingRight = true;
+
+    private SpriteRenderer _spriteRenderer;
+    
+    //Flags
+    private bool _canAttack = true;
+    private bool _isDashing = false;
+    
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -47,6 +64,22 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
 
+        //Dash handlling
+        if (Input.GetKey(KeyCode.J) && _lastDashTime + dashCooldown <= Time.time)
+        {
+            Dash();
+        }
+        
+        if (_isDashing == true)
+        {
+            _dashTimeLeft -= Time.deltaTime;
+            if (_dashTimeLeft <= 0f)
+            {
+                _isDashing = false;
+                _canAttack = true;
+            }
+        }
+        
     }
 
     // Flip the facing direction
@@ -75,5 +108,17 @@ public class PlayerMovement : MonoBehaviour
     public void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(transform.position - transform.up * castDistance, boxSize);
+    }
+
+    public void Dash()
+    {
+        //Locking out attacking
+        _canAttack = false;
+        _isDashing = true;
+        _dashTimeLeft = dashDuration;
+        _lastDashTime = Time.time;
+        
+        _rigidbody2D.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, _rigidbody2D.linearVelocity.y);
+
     }
 }
