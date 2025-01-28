@@ -6,15 +6,15 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] public float moveSpeed = 10f;
+    [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float jumpAmount = 10f;
     
     //Dash settings
-    [SerializeField] public float dashSpeed = 60f;
-    [SerializeField] public float dashDuration = 1f;
-    [SerializeField] public float dashCooldown = 2f;
-    private float _dashTimeLeft = 0f;
-    private float _lastDashTime = 0f;
+    [SerializeField] public float dashSpeed = 15f;
+    [SerializeField] public float dashDuration = 0.2f;
+    [SerializeField] public float dashCooldown = 1f;
+    private float _dashTimeLeft;
+    private float _lastDashTime;
     
     public Vector2 boxSize;
     public float castDistance;
@@ -37,46 +37,53 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        _rigidbody2D.linearVelocity = new Vector2(horizontal * moveSpeed, _rigidbody2D.linearVelocity.y);
-        Debug.Log(transform.rotation.y);
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (!_isDashing)
         {
-            _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
-        }
-        //Flip the sprite to match the direction we are facing. Default is right
-        /*if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(10, 10, 1);
-        }
-
-        if (horizontal < 0)
-        {
-            transform.localScale = new Vector3(-10, 10, 1);
-        }*/
-        if (horizontal > 0 && !isFacingRight)
-        {
-            Flip();
-        }
-
-        if (horizontal < 0 && isFacingRight)
-        {
-            Flip();
-        }
-
-        //Dash handlling
-        if (Input.GetKey(KeyCode.J) && _lastDashTime + dashCooldown <= Time.time)
-        {
-            Dash();
-        }
-        
-        if (_isDashing == true)
-        {
-            _dashTimeLeft -= Time.deltaTime;
-            if (_dashTimeLeft <= 0f)
+            float horizontal = Input.GetAxis("Horizontal");
+            _rigidbody2D.linearVelocity = new Vector2(horizontal * moveSpeed, _rigidbody2D.linearVelocity.y);
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
             {
+                _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
+            }
+
+            //Flip the sprite to match the direction we are facing. Default is right
+            /*if (horizontal > 0)
+            {
+                transform.localScale = new Vector3(10, 10, 1);
+            }
+
+            if (horizontal < 0)
+            {
+                transform.localScale = new Vector3(-10, 10, 1);
+            }*/
+            if (horizontal > 0 && !isFacingRight)
+            {
+                Flip();
+            }
+
+            if (horizontal < 0 && isFacingRight)
+            {
+                Flip();
+            }
+
+            //Dash handlling
+            if (Input.GetKey(KeyCode.J) && _lastDashTime + dashCooldown <= Time.time)
+            {
+                Debug.Log("START DASHING");
+                Dash();
+            }
+        }
+
+        else //_isDashing is True
+        {
+            Debug.Log("DASH");
+            _dashTimeLeft -= Time.deltaTime;
+            if (_dashTimeLeft <= 0)
+            {
+                Debug.Log("DASH END");
                 _isDashing = false;
                 _canAttack = true;
+                _rigidbody2D.linearVelocity = new Vector2(0, _rigidbody2D.linearVelocity.y); // Stop horizontal velocity after dash
             }
         }
         
@@ -117,8 +124,10 @@ public class PlayerMovement : MonoBehaviour
         _isDashing = true;
         _dashTimeLeft = dashDuration;
         _lastDashTime = Time.time;
+         
+        float dashDirection = isFacingRight ? 1f : -1f;
         
-        _rigidbody2D.linearVelocity = new Vector2(transform.localScale.x * dashSpeed, _rigidbody2D.linearVelocity.y);
+        _rigidbody2D.linearVelocity = new Vector2(dashDirection * dashSpeed, _rigidbody2D.linearVelocity.y);
 
     }
 }
