@@ -67,20 +67,17 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Dash handlling
-            if (Input.GetKey(KeyCode.J) && _lastDashTime + dashCooldown <= Time.time)
+            if (Input.GetKey(KeyCode.J) && isGrounded() && _lastDashTime + dashCooldown <= Time.time)
             {
-                Debug.Log("START DASHING");
                 Dash();
             }
         }
 
         else //_isDashing is True
         {
-            Debug.Log("DASH");
             _dashTimeLeft -= Time.deltaTime;
             if (_dashTimeLeft <= 0)
             {
-                Debug.Log("DASH END");
                 _isDashing = false;
                 _canAttack = true;
                 _rigidbody2D.linearVelocity = new Vector2(0, _rigidbody2D.linearVelocity.y); // Stop horizontal velocity after dash
