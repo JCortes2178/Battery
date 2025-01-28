@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -0.8233453, y: -2.5328326, z: -0.026361898}
+    m_Target: {x: -1.1976231, y: -2.5063512, z: 0}
     speed: 2
     m_Value: {x: -0.8233453, y: -2.5328326, z: -0.026361898}
   m_RenderMode: 0
