@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
             _rigidbody2D.linearVelocity = new Vector2(horizontal * moveSpeed, _rigidbody2D.linearVelocity.y);
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
             {
-                _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
+                Jump();
             }
 
             //Flip the sprite to match the direction we are facing. Default is right
@@ -97,6 +97,11 @@ public class PlayerMovement : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    //Function for jumping
+    public void Jump()
+    {
+        _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
+    }
     // boolean to tell if the player is on the ground. 
     public bool isGrounded()
     {
