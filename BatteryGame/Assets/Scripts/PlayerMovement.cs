@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     //Flags
     private bool _canAttack = true;
     private bool _isDashing = false;
+    public PlayerHealth playerHealth;
     
     void Start()
     {
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.J) && isGrounded() && _lastDashTime + dashCooldown <= Time.time)
             {
                 Dash();
+                playerHealth.LoseHealthDash();
             }
         }
 

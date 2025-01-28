@@ -32,5 +32,6 @@ public class PlayerHealth : MonoBehaviour
     void LoseHealthOverTime()
     {
         health -= healthLostPerSecond;
+        Debug.Log(health);
     }
 }

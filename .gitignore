@@ -4,3 +4,5 @@ BatteryGame/Temp/*
 BatteryGame/Assembly-CSharp.csproj
 BatteryGame/BatteryGame.sln
 *.log
+*.log
+*.log
