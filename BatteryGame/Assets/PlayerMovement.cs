@@ -11,11 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public float castDistance;
     public LayerMask groundLayer;
     private Rigidbody2D _rigidbody2D;
-    private SpriteRenderer _spriteRenderer;
+    private bool isFacingRight = true;
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -24,12 +23,10 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         _rigidbody2D.linearVelocity = new Vector2(horizontal * moveSpeed, _rigidbody2D.linearVelocity.y);
         Debug.Log(transform.rotation.y);
-        //Debug.Log(horizontal);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
         }
-
         //Flip the sprite to match the direction we are facing. Default is right
         /*if (horizontal > 0)
         {
@@ -40,26 +37,25 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(-10, 10, 1);
         }*/
-        if (horizontal > 0 && transform.rotation.y == -1f)
+        if (horizontal > 0 && !isFacingRight)
         {
-            //_spriteRenderer.flipX = false; // Default facing right
-            transform.Rotate(0f, 180f, 0f);
-            Debug.Log(horizontal);
-            Debug.Log("Facing Right");
-            Debug.Log(transform.rotation.y);
+            Flip();
         }
 
-        if (horizontal < 0 && transform.rotation.y == 0f)
+        if (horizontal < 0 && isFacingRight)
         {
-            //_spriteRenderer.flipX = true; // Default facing right
-
-           // transform.Rotate(0f, 180f, 0f);
-            transform.Rotate(0f, -180f, 0f);
-            Debug.Log(horizontal);
-            Debug.Log("Facing Left");
-            Debug.Log(transform.rotation.y);
+            Flip();
         }
-        
+
+    }
+
+    // Flip the facing direction
+    public void Flip()
+    {
+        isFacingRight = !isFacingRight;
+
+        // Rotates the player 180 degrees on the Y-axis.
+        transform.Rotate(0f, 180f, 0f);
     }
 
     // boolean to tell if the player is on the ground. 
@@ -74,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
     }
+
     //No way to see the boxcast in the editor. This will outline it. 
     public void OnDrawGizmos()
     {
