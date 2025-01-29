@@ -518,6 +518,7 @@ MonoBehaviour:
   healthLostPerSecond: 1
   dashCost: 5
   attackCost: 10
+  jumpCost: 3
   healthbar: {fileID: 1346790259}
 --- !u!4 &593402043
 Transform:
