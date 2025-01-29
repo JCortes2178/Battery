@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); //converts the screen-space mouse position to world coordinates.
         Vector3 rotation = mousePosition - transform.position;
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
