@@ -6,10 +6,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] public float healthLostPerSecond = 1f;
     [SerializeField] public float dashCost = 5f;
     [SerializeField] public float attackCost = 10f;
+    [SerializeField] public float jumpCost = 3f;
+    
+    public HealthbarScript healthbar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         health = 100;
+        healthbar.SetMaxHealth(health);
         InvokeRepeating("LoseHealthOverTime", 1f, 1f);
     }
 
@@ -17,6 +21,11 @@ public class PlayerHealth : MonoBehaviour
     public void LoseHealthDash()
     {
         LoseHealth(dashCost);
+    }
+
+    public void LoseHealthJump()
+    {
+        LoseHealth(jumpCost);
     }
 
     public void LoseHealthAttack()
@@ -27,11 +36,12 @@ public class PlayerHealth : MonoBehaviour
     public void LoseHealth(float damage)
     {
         health -= damage;
+        healthbar.SetHealth(health);
     }
 
     void LoseHealthOverTime()
     {
         health -= healthLostPerSecond;
-        Debug.Log(health);
+        healthbar.SetHealth(health);
     }
 }
