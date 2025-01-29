@@ -4,6 +4,7 @@ public class BulletScript : MonoBehaviour
 {
     public float speed = 20f;
     [SerializeField] float timeToDissipate = 2f;
+    [SerializeField] int bulletDamage = 100;
     public Rigidbody2D _rigidbody2D;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,9 +19,14 @@ public class BulletScript : MonoBehaviour
     }
 
     //Projectile behavior when it collides.
-    void OnTriggerEnter2D(Collider2D hitinfo)
+    void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Debug.Log(hitinfo.name);
+        Debug.Log(hitInfo.name);
+        Enemy enemyNPC = hitInfo.GetComponent<Enemy>();
+        if (enemyNPC != null)
+        {
+            enemyNPC.TakeDamage(bulletDamage);
+        }
         Destroy(gameObject);
     }
 }
