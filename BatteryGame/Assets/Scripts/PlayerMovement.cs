@@ -2,17 +2,31 @@ using System;
 using NUnit.Framework;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] public float moveSpeed = 5f;
+    [SerializeField] public float MOVE_SPEED_GREEN = 5f;
+    [SerializeField] public float MOVE_SPEED_YELLOW = 10f;
+    [SerializeField] public float MOVE_SPEED_ORANGE = 20;
+    [SerializeField] public float MOVE_SPEED_RED = 40f;
+    
+    [Header("Jump")]
     [SerializeField] public float jumpAmount = 10f;
     
+    
     //Dash settings
+    [Header("Dash")]
     [SerializeField] public float dashSpeed = 15f;
     [SerializeField] public float dashDuration = 0.2f;
     [SerializeField] public float dashCooldown = 1f;
+    [SerializeField] public float DASH_SPEED_GREEN = 5f;
+    [SerializeField] public float DASH_SPEED_YELLOW = 5f;
+    [SerializeField] public float DASH_SPEED_ORANGE = 5f;
+    [SerializeField] public float DASH_SPEED_RED = 5f;
+    
     private float _dashTimeLeft;
     private float _lastDashTime;
     
@@ -30,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
     private bool _isDashing = false;
     public PlayerHealth playerHealth;
     
+    //Constants - constants are capitalized, values match gradient of healthbar
+    private float THRESH_LOW = 10f; //Low is Orange | Red
+    private float THRESH_MID = 25f; //Mid is Yellow | Orange
+    private float THRESH_HIGH = 60f; //High is Green | Yellow
+    
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -38,6 +57,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float currentHealth = playerHealth.health;
+        if (THRESH_MID <= currentHealth &&  currentHealth <= THRESH_HIGH)
+        {
+            moveSpeed = MOVE_SPEED_YELLOW;
+        }else if (THRESH_LOW <= currentHealth && currentHealth < THRESH_MID)
+        {
+            moveSpeed = MOVE_SPEED_ORANGE;
+        }else if (0 < currentHealth && currentHealth < THRESH_LOW)
+        {
+            moveSpeed = MOVE_SPEED_RED;
+        }
+        else
+        {
+            moveSpeed = MOVE_SPEED_GREEN;
+        }
+
+        //dashSpeed = ;
+
+
+        //moveSpeed = ;
+
+
+        //jumpSpeed = ;
+        
         if (!_isDashing)
         {
             float horizontal = Input.GetAxis("Horizontal");
