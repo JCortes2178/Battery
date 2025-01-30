@@ -45,9 +45,9 @@ public class PlayerMovement : MonoBehaviour
     public PlayerHealth playerHealth;
     
     //Constants - constants are capitalized, values match gradient of healthbar
-    private float THRESH_LOW = 10f; //Low is Orange | Red
-    private float THRESH_MID = 25f; //Mid is Yellow | Orange
-    private float THRESH_HIGH = 60f; //High is Green | Yellow
+    private float THRESH_LOW = 20f; //Low is Orange | Red
+    private float THRESH_MID = 60f; //Mid is Yellow | Orange
+    private float THRESH_HIGH = 90f; //High is Green | Yellow
     
     void Start()
     {
