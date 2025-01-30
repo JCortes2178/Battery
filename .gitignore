@@ -7,3 +7,6 @@ BatteryGame/BatteryGame.sln
 *.log
 *.log
 BatteryGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+BatteryGame/BatteryGame.sln
+BatteryGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+BatteryGame/Assembly-CSharp.csproj

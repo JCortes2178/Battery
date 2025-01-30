@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Dash handlling
-            if (Input.GetKey(KeyCode.J) && isGrounded() && _lastDashTime + dashCooldown <= Time.time)
+            if (Input.GetKey(KeyCode.LeftShift) && isGrounded() && _lastDashTime + dashCooldown <= Time.time)
             {
                 Dash();
                 playerHealth.LoseHealthDash();
