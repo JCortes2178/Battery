@@ -1440,10 +1440,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  MOVE_SPEED_GREEN: 5
+  MOVE_SPEED_YELLOW: 10
+  MOVE_SPEED_ORANGE: 15
+  MOVE_SPEED_RED: 20
   jumpAmount: 10
   dashSpeed: 10
   dashDuration: 0.2
   dashCooldown: 1
+  DASH_SPEED_GREEN: 15
+  DASH_SPEED_YELLOW: 30
+  DASH_SPEED_ORANGE: 45
+  DASH_SPEED_RED: 60
   boxSize: {x: 1.31, y: 0.37}
   castDistance: 0.94
   groundLayer:
@@ -1476,7 +1484,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2093069179
 BoxCollider2D:
   m_ObjectHideFlags: 0
