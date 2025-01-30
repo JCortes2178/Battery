@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 593402042}
   m_Layer: 0
   m_Name: HealthObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -754,6 +754,7 @@ GameObject:
   - component: {fileID: 921879095}
   - component: {fileID: 921879094}
   - component: {fileID: 921879098}
+  - component: {fileID: 921879099}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -917,6 +918,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  damageDealt: 100
+--- !u!114 &921879099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921879093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c831f15f98f160445a58cef9d5e72291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2093069174}
+  speed: 1
+  aggroDistance: 10
 --- !u!1 &1120234438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1350,7 @@ GameObject:
   - component: {fileID: 2093069181}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
