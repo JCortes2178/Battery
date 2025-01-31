@@ -57,6 +57,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Camera follow player
+        Camera.main.transform.position = new Vector3(
+        transform.position.x,
+        (float)0.3,
+        (float)-10);
+
         //move speed math
         float currentHealth = playerHealth.health;
         if (THRESH_MID <= currentHealth &&  currentHealth <= THRESH_HIGH)
@@ -151,8 +157,9 @@ public class PlayerMovement : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
 
-        // Rotates the player 180 degrees on the Y-axis.
-        transform.Rotate(0f, 180f, 0f);
+        /* Rotates the player 180 degrees on the Y-axis.
+        transform.Rotate(0f, 180f, 0f);*/
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
     }
 
     //Function for jumping
