@@ -42,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
     //Flags
     private bool _canAttack = true;
     private bool _isDashing = false;
-    public bool isInvincible = false;
     public PlayerHealth playerHealth;
     
     //Constants - constants are capitalized, values match gradient of healthbar

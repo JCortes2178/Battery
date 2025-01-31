@@ -53,6 +53,7 @@
     <Compile Include="Assets/Scripts/BulletScript.cs" />
     <Compile Include="Assets/Scripts/PlayerAttack.cs" />
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
+    <Compile Include="Assets/GameStateScript.cs" />
     <Compile Include="Assets/Scripts/StartButtonScript.cs" />
     <Compile Include="Assets/Scripts/HealthbarScript.cs" />
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
