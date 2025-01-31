@@ -1,9 +1,11 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public float damageDealt = 100f;
+    public GameObject rechargePackPrefab;
 
     public void TakeDamage(int damage)
     {
@@ -32,5 +34,6 @@ public class Enemy : MonoBehaviour
     private void Death()
     {
         Destroy(gameObject);
+        Instantiate(rechargePackPrefab, transform.position, Quaternion.identity);
     }
 }
