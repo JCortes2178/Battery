@@ -1,7 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] public float maximumHealth = 100f;
     [SerializeField] public float health = 100f;
     [SerializeField] public float healthLostPerSecond = 1f;
     [SerializeField] public float dashCost = 5f;
@@ -13,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         health = 100;
-        healthbar.SetMaxHealth(health);
+        healthbar.SetMaxHealth(maximumHealth);
         InvokeRepeating("LoseHealthOverTime", 1f, 1f);
     }
 
@@ -37,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         healthbar.SetHealth(health);
+        //code for if health<=0 DIE
     }
 
     void LoseHealthOverTime()
@@ -47,6 +50,10 @@ public class PlayerHealth : MonoBehaviour
     public void GainHealth(float regen)
     {
         health += regen;
+        if (health > maximumHealth)
+        {
+            health = maximumHealth;
+        }
         healthbar.SetHealth(health);
     }
 }
