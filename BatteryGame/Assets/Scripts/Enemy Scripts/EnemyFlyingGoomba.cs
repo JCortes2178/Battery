@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyFlyingGoomba : EnemyAI
+public class EnemyFlyingGoomba : EnemyGoomba
 {
     //public GameObject player;
     //public float speed;

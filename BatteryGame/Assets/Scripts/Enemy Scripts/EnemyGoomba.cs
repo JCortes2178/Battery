@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : Enemy
+public class EnemyGoomba : Enemy
 {
     public GameObject player;
     
