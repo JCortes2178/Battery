@@ -44,4 +44,9 @@ public class PlayerHealth : MonoBehaviour
         health -= healthLostPerSecond;
         healthbar.SetHealth(health);
     }
+    public void GainHealth(float regen)
+    {
+        health += regen;
+        healthbar.SetHealth(health);
+    }
 }
