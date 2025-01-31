@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\MainButtonScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyBulletScript.cs" />
     <Compile Include="Assets\Scripts\StartButtonScript.cs" />
     <Compile Include="Assets\Scripts\HealthbarScript.cs" />
   </ItemGroup>

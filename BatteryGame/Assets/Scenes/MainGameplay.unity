@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 241825671}
   - component: {fileID: 241825670}
   - component: {fileID: 241825669}
+  - component: {fileID: 241825673}
   m_Layer: 0
   m_Name: Shooting Enemy
   m_TagString: Untagged
@@ -432,9 +433,32 @@ Transform:
   m_LocalPosition: {x: 11.16, y: -2.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 501255746}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &241825673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241825668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abcf5be50f23ed408b3483eacfeef84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damageDealt: 10
+  speed: 0
+  aggroDistance: 10
+  rechargePackPrefab: {fileID: 566414481}
+  player: {fileID: 2093069174}
+  enemyBulletPrefab: {fileID: 5734907551898499671, guid: 083dedbfa781a954aaae150666dab2fd, type: 3}
+  firePoint: {fileID: 501255746}
+  fireRate: 2
+  timer: 0
 --- !u!1 &478491315
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +591,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
+--- !u!1 &501255745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501255746}
+  m_Layer: 0
+  m_Name: EnemyFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501255746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501255745}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 241825672}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2031,7 +2086,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38823533, g: 0.60784316, b: 0.9960785, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
