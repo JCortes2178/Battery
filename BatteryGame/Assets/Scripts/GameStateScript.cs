@@ -6,15 +6,22 @@ public class GameStateScript : MonoBehaviour
     public void StartGame()
     {
         //TODO: right now game index is 0, will need to update this when we switch it
-        SceneManager.LoadScene(0);
+        int SceneIndex = 1;
+        SceneManager.LoadScene(SceneIndex);
     }
 
     public void GameOver()
     {
         //TODO make this switch to an game over scene
-        //When we do this switch we need to put gameOverScence after MainScene in Build Settings
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //For now we just reload the scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        int GameOverIndex = SceneManager.GetActiveScene().buildIndex + 1; //2 right now
+        SceneManager.LoadScene(GameOverIndex);
     }
+    
+    public void GoToMainMenu()
+    {
+        int mainSceneIndex = 0;
+        SceneManager.LoadScene(mainSceneIndex);
+    }
+    
 }
