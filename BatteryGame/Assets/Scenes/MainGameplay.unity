@@ -1267,9 +1267,9 @@ MonoBehaviour:
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 6554
-    ctime1: 16384
-    ctime2: 39321
+    ctime0: 13107
+    ctime1: 39321
+    ctime2: 58982
     ctime3: 65535
     ctime4: 0
     ctime5: 0
@@ -1497,10 +1497,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
+  MOVE_SPEED_GREEN: 5
+  MOVE_SPEED_YELLOW: 10
+  MOVE_SPEED_ORANGE: 15
+  MOVE_SPEED_RED: 20
   jumpAmount: 10
   dashSpeed: 10
   dashDuration: 0.2
   dashCooldown: 1
+  DASH_SPEED_GREEN: 15
+  DASH_SPEED_YELLOW: 30
+  DASH_SPEED_ORANGE: 45
+  DASH_SPEED_RED: 60
   boxSize: {x: 1.31, y: 0.37}
   castDistance: 0.94
   groundLayer:
