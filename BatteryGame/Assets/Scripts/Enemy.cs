@@ -5,6 +5,9 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public float damageDealt = 100f;
+    public float speed;
+    protected float distance;
+    [SerializeField]protected float aggroDistance;
     public GameObject rechargePackPrefab;
 
     public void TakeDamage(int damage)

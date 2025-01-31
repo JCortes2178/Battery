@@ -67,6 +67,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\EnemyGoomba.cs" />
+    <Compile Include="Assets\Scripts\EnemyFlyingGoomba.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameStateScript.cs" />
     <Compile Include="Assets\Scripts\RechargePack.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\StartButtonScript.cs" />
     <Compile Include="Assets\Scripts\HealthbarScript.cs" />
+    <Compile Include="Assets\Scripts\EnemyArtillery.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
