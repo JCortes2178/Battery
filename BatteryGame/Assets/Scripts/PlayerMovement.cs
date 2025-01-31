@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     //Flags
     private bool _canAttack = true;
     private bool _isDashing = false;
+    public bool isInvincible = false;
     public PlayerHealth playerHealth;
     
     //Constants - constants are capitalized, values match gradient of healthbar
@@ -132,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             //Dash handlling
-            if (Input.GetKey(KeyCode.LeftShift) && isGrounded() && _lastDashTime + dashCooldown <= Time.time)
+            if (Input.GetKey(KeyCode.LeftShift) && _lastDashTime + dashCooldown <= Time.time)
             {
                 Dash();
                 playerHealth.LoseHealthDash();
