@@ -453,7 +453,7 @@ MonoBehaviour:
   damageDealt: 10
   speed: 0
   aggroDistance: 10
-  rechargePackPrefab: {fileID: 566414481}
+  rechargePackPrefab: {fileID: 4186182631952043050, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
   player: {fileID: 2093069174}
   enemyBulletPrefab: {fileID: 5734907551898499671, guid: 083dedbfa781a954aaae150666dab2fd, type: 3}
   firePoint: {fileID: 501255746}
@@ -498,6 +498,7 @@ MonoBehaviour:
   isGrounded: 0
   jumpAmount: 10
   jumpCooldown: 3
+  damageDealt: 10
   currentState: 0
 --- !u!61 &384689915
 BoxCollider2D:
@@ -942,11 +943,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &566414481 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4186182631952043050, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
-  m_PrefabInstance: {fileID: 498582816}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &591914206
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +978,7 @@ MonoBehaviour:
   damageDealt: 10
   speed: 3
   aggroDistance: 2
-  rechargePackPrefab: {fileID: 566414481}
+  rechargePackPrefab: {fileID: 4186182631952043050, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
   player: {fileID: 2093069174}
   enemyBulletPrefab: {fileID: 5734907551898499671, guid: 083dedbfa781a954aaae150666dab2fd, type: 3}
   firePoint: {fileID: 1671542193}
@@ -1278,7 +1274,7 @@ MonoBehaviour:
   damageDealt: 50
   speed: 5
   aggroDistance: 5
-  rechargePackPrefab: {fileID: 566414481}
+  rechargePackPrefab: {fileID: 4186182631952043050, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
   player: {fileID: 2093069174}
 --- !u!212 &666572194
 SpriteRenderer:
@@ -1344,7 +1340,7 @@ Transform:
   m_GameObject: {fileID: 666572192}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.81, y: 3.32, z: 0}
+  m_LocalPosition: {x: -1.35, y: 3.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1741,7 +1737,7 @@ MonoBehaviour:
   damageDealt: 0
   speed: 2
   aggroDistance: 10
-  rechargePackPrefab: {fileID: 566414481}
+  rechargePackPrefab: {fileID: 4186182631952043050, guid: 4b3385242dee8e04fa3f69e6f8a03979, type: 3}
   player: {fileID: 2093069174}
 --- !u!1 &1120234438
 GameObject:
