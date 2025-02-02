@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
+      propertyPath: m_Name
+      value: Shooting Enemy (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.4
@@ -166,10 +170,6 @@ PrefabInstance:
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
-      propertyPath: m_Name
-      value: Shooting Enemy (4)
       objectReference: {fileID: 0}
     - target: {fileID: 8298017563370909413, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: player
@@ -342,10 +342,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
-      propertyPath: m_Name
-      value: Flying Enemy (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3259924884418768448, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: player
       value: 
@@ -390,6 +386,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -403,10 +403,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
-      propertyPath: m_Name
-      value: Flying Enemy (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3259924884418768448, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: player
       value: 
@@ -450,6 +446,10 @@ PrefabInstance:
     - target: {fileID: 4101494339039539591, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1093,6 +1093,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
+      propertyPath: m_Name
+      value: Shooting Enemy (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.4
@@ -1133,10 +1137,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
-      propertyPath: m_Name
-      value: Shooting Enemy (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 8298017563370909413, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: player
       value: 
@@ -1154,6 +1154,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
+      propertyPath: m_Name
+      value: Enemy (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2314547275706998681, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.69
@@ -1198,10 +1202,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2093069174}
-    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
-      propertyPath: m_Name
-      value: Enemy (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1262,6 +1262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
+      propertyPath: m_Name
+      value: Shooting Enemy (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.4
@@ -1301,10 +1305,6 @@ PrefabInstance:
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
-      propertyPath: m_Name
-      value: Shooting Enemy (1)
       objectReference: {fileID: 0}
     - target: {fileID: 8298017563370909413, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: player
@@ -1442,6 +1442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2093069174}
     - target: {fileID: 5280782566990116472, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 61.7
@@ -1486,10 +1490,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Strafing Enemy (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2093069174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1503,6 +1503,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
+      propertyPath: m_Name
+      value: Shooting Enemy (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.4
@@ -1542,10 +1546,6 @@ PrefabInstance:
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
-      propertyPath: m_Name
-      value: Shooting Enemy (2)
       objectReference: {fileID: 0}
     - target: {fileID: 8298017563370909413, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: player
@@ -1726,6 +1726,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2093069174}
     - target: {fileID: 5280782566990116472, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.1
@@ -1770,10 +1774,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Strafing Enemy (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2093069174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1832,6 +1832,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
+      propertyPath: m_Name
+      value: Enemy (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2314547275706998681, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.3
@@ -1876,10 +1880,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2093069174}
-    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
-      propertyPath: m_Name
-      value: Enemy (4)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2028,10 +2028,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
-      propertyPath: m_Name
-      value: Flying Enemy (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 3259924884418768448, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: player
       value: 
@@ -2075,6 +2071,10 @@ PrefabInstance:
     - target: {fileID: 4101494339039539591, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2199,7 +2199,7 @@ GameObject:
   - component: {fileID: 1547533627}
   m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7150,6 +7150,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2093069174}
     - target: {fileID: 5280782566990116472, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.5
@@ -7194,10 +7198,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Strafing Enemy (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2093069174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7211,10 +7211,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
-      propertyPath: m_Name
-      value: Flying Enemy (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3259924884418768448, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: player
       value: 
@@ -7259,6 +7255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7272,6 +7272,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2093069174}
     - target: {fileID: 5280782566990116472, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.6
@@ -7316,10 +7320,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Strafing Enemy (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2093069174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7333,6 +7333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
+      propertyPath: m_Name
+      value: Enemy (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2314547275706998681, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22
@@ -7377,10 +7381,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2093069174}
-    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
-      propertyPath: m_Name
-      value: Enemy (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7490,19 +7490,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deacccc6ab54482ebf037cc73660d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  MOVE_SPEED_GREEN: 5
-  MOVE_SPEED_YELLOW: 10
+  moveSpeed: 15
+  MOVE_SPEED_GREEN: 15
+  MOVE_SPEED_YELLOW: 15
   MOVE_SPEED_ORANGE: 15
-  MOVE_SPEED_RED: 20
+  MOVE_SPEED_RED: 15
   jumpAmount: 20
-  dashSpeed: 10
+  dashSpeed: 40
   dashDuration: 0.2
   dashCooldown: 0.3
-  DASH_SPEED_GREEN: 15
-  DASH_SPEED_YELLOW: 30
-  DASH_SPEED_ORANGE: 45
-  DASH_SPEED_RED: 60
+  DASH_SPEED_GREEN: 40
+  DASH_SPEED_YELLOW: 40
+  DASH_SPEED_ORANGE: 40
+  DASH_SPEED_RED: 40
   boxSize: {x: 1.31, y: 0.37}
   castDistance: 0.94
   groundLayer:
@@ -7590,6 +7590,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
+      propertyPath: m_Name
+      value: Enemy (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2314547275706998681, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.07
@@ -7634,10 +7638,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2093069174}
-    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
-      propertyPath: m_Name
-      value: Enemy (3)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7738,10 +7738,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
-      propertyPath: m_Name
-      value: Flying Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 3259924884418768448, guid: bacefe46d618a204595710db36e03c90, type: 3}
       propertyPath: player
       value: 
@@ -7786,6 +7782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+      propertyPath: m_Name
+      value: Flying Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7799,6 +7799,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
+      propertyPath: m_Name
+      value: Shooting Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5604868876505080663, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.16
@@ -7839,10 +7843,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 354490406932706293, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
-      propertyPath: m_Name
-      value: Shooting Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 8298017563370909413, guid: e65604497afdb1247a31958e5e9d8926, type: 3}
       propertyPath: player
       value: 
@@ -7860,6 +7860,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2093069174}
     - target: {fileID: 5280782566990116472, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.21
@@ -7904,10 +7908,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Strafing Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4158089630584238634, guid: 7dd497fceab96d145bab3a7f52e26ea6, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2093069174}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7921,6 +7921,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2314547275706998681, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.21
@@ -7965,10 +7969,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2093069174}
-    - target: {fileID: 1817315127901395649, guid: 259bee4f687fc1045aac14a1c16bcded, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
