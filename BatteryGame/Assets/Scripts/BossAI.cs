@@ -5,6 +5,8 @@ public class BossAI : MonoBehaviour
 {
     public float meleeDistance;
     public float speed;
+    public Transform firePoint;
+    public GameObject enemyBulletPrefab;
     [Header("Player Tracking")]
     public GameObject player;
     public float distance;
@@ -75,6 +77,12 @@ public class BossAI : MonoBehaviour
         Vector2 jumpDirection = (targetPosition - (Vector2)transform.position).normalized;
         _rigidbody.linearVelocity = new Vector2(jumpDirection.x * 5f, jumpAmount);
         Debug.Log(isGrounded);
+    }
+    protected void Shoot()
+    {
+
+        //Vector2 direction = player.transform.position - transform.position;
+        Instantiate(enemyBulletPrefab, firePoint.position, firePoint.rotation);
     }
     void Staggered()
     {
