@@ -49,8 +49,8 @@
     <Compile Include="Assets/Scripts/Enemy Scripts/EnemyFlyingGoomba.cs" />
     <Compile Include="Assets/Scripts/PlayerHealth.cs" />
     <Compile Include="Assets/Scripts/GameStateScript.cs" />
-    <Compile Include="Assets/BossHealth.cs" />
     <Compile Include="Assets/Scripts/BossAI.cs" />
+    <Compile Include="Assets/Scripts/BossHealth.cs" />
     <Compile Include="Assets/Scripts/Enemy Scripts/Enemy.cs" />
     <Compile Include="Assets/Scripts/RechargePack.cs" />
     <Compile Include="Assets/Scripts/BulletScript.cs" />
