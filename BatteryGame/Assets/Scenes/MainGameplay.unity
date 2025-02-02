@@ -1855,7 +1855,7 @@ Transform:
   m_GameObject: {fileID: 1120234438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.39, z: 0}
+  m_LocalPosition: {x: 0, y: -4.64, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4035,7 +4035,7 @@ MonoBehaviour:
   MOVE_SPEED_YELLOW: 10
   MOVE_SPEED_ORANGE: 15
   MOVE_SPEED_RED: 20
-  jumpAmount: 10
+  jumpAmount: 20
   dashSpeed: 10
   dashDuration: 0.2
   dashCooldown: 1
@@ -4064,7 +4064,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
