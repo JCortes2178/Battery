@@ -4038,7 +4038,7 @@ MonoBehaviour:
   jumpAmount: 20
   dashSpeed: 10
   dashDuration: 0.2
-  dashCooldown: 1
+  dashCooldown: 0.3
   DASH_SPEED_GREEN: 15
   DASH_SPEED_YELLOW: 30
   DASH_SPEED_ORANGE: 45
