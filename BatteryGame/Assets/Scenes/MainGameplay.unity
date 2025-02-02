@@ -609,8 +609,8 @@ MonoBehaviour:
   hitCounter: 0
   staggerTime: 3
   isStaggered: 0
-  minionType: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  minionType: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+  spawnPoint: {fileID: 309417388}
   currentState: 0
 --- !u!61 &384689915
 BoxCollider2D:
