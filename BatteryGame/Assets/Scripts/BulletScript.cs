@@ -26,7 +26,8 @@ public class BulletScript : MonoBehaviour
         if (enemyNPC != null)
         {
             enemyNPC.TakeDamage(bulletDamage);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+        
     }
 }
