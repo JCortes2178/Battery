@@ -161,6 +161,16 @@ public class PlayerMovement : MonoBehaviour
         /* Rotates the player 180 degrees on the Y-axis.
         transform.Rotate(0f, 180f, 0f);*/
         GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+
+        if (isFacingRight)
+        {
+            GetComponent<BoxCollider2D>().offset = new Vector2(-0.020f, GetComponent<BoxCollider2D>().offset.y);
+        }
+        else
+        {
+            GetComponent<BoxCollider2D>().offset = new Vector2(0.020f, GetComponent<BoxCollider2D>().offset.y);
+        }
+
     }
 
     //Function for jumping
