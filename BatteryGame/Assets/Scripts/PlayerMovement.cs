@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float MOVE_SPEED_RED = 20f;
     
     [Header("Jump")]
-    [SerializeField] public float jumpAmount = 10f;
+    [SerializeField] public float jumpAmount = 20f;
     
     
     //Dash settings
@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody2D.gravityScale = 5;
     }
 
     // Update is called once per frame
@@ -165,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
     //Function for jumping
     public void Jump()
     {
-        _rigidbody2D.linearVelocity = new Vector2(_rigidbody2D.linearVelocity.x, jumpAmount);
+        _rigidbody2D.AddForce(new Vector2(0, jumpAmount), ForceMode2D.Impulse);
     }
     // boolean to tell if the player is on the ground. 
     public bool isGrounded()

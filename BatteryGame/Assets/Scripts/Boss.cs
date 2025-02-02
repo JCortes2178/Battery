@@ -24,14 +24,18 @@ public class Boss : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        Collider2D bossCollider = GetComponent<Collider2D>();
+        Collider2D playerCollider = player.GetComponent<Collider2D>();
+        //Collider2D playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
+        Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
         //StartCoroutine(JumpLoop());
     }
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.transform.position);
-        if(isGrounded == true)
+        if (isGrounded == true)
         {
-        JumpAttack();
+            JumpAttack();
         }
         /*switch (currentState)
         {
@@ -72,14 +76,14 @@ public class Boss : MonoBehaviour
         //_rigidbody.linearVelocity = new Vector2(targetPosition.x, jumpAmount);
         _rigidbody.linearVelocity = new Vector2(jumpDirection.x * 5f, jumpAmount);
         Debug.Log(isGrounded);
-        
-       //yield return new WaitForSeconds(1f);
+
+        //yield return new WaitForSeconds(1f);
     }
     IEnumerator JumpLoop()
     {
-        while(true)
+        while (true)
         {
-            yield return new WaitUntil(() => isGrounded==true);
+            yield return new WaitUntil(() => isGrounded == true);
             yield return new WaitForSeconds(jumpCooldown);
         }
     }
@@ -97,7 +101,8 @@ public class Boss : MonoBehaviour
             if (playerHP != null)
             {
                 playerHP.LoseHealth(damageDealt);
-            }else
+            }
+            else
             {
                 Debug.LogError("Error: Null Exception in Enemy.cs");
             }
