@@ -58,10 +58,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Camera follow player
-        Camera.main.transform.position = new Vector3(
-        transform.position.x,
-        (float)0.3,
-        (float)-10);
+        //Camera.main.transform.position = new Vector3(
+        //transform.position.x,
+        //(float)0.3,
+        //(float)-10);
 
         //move speed math
         float currentHealth = playerHealth.health;
