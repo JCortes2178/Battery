@@ -10,3 +10,7 @@ BatteryGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
 BatteryGame/BatteryGame.sln
 BatteryGame/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
 BatteryGame/Assembly-CSharp.csproj
+*.log
+BatteryGame/Logs/AssetImportWorker1-prev.log
+/BatteryGame/Logs
+BatteryGame/UserSettings/Layouts/default-6000.dwlt
