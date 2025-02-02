@@ -167,5 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   timeToDissipate: 2
-  bulletDamage: 100
+  bulletDamage: 20
   _rigidbody2D: {fileID: 534612813662647730}
