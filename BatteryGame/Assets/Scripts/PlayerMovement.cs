@@ -164,11 +164,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (isFacingRight)
         {
-            GetComponent<BoxCollider2D>().offset = new Vector2(-0.020f, GetComponent<BoxCollider2D>().offset.y);
+            GetComponent<BoxCollider2D>().offset = new Vector2(0.004493941f, GetComponent<BoxCollider2D>().offset.y);
         }
         else
         {
-            GetComponent<BoxCollider2D>().offset = new Vector2(0.020f, GetComponent<BoxCollider2D>().offset.y);
+            GetComponent<BoxCollider2D>().offset = new Vector2(-0.004493941f, GetComponent<BoxCollider2D>().offset.y);
         }
 
     }
