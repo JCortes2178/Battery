@@ -5,8 +5,6 @@ public class BossAI : MonoBehaviour
 {
     public float meleeDistance;
     public float speed;
-    public Transform firePoint;
-    public GameObject enemyBulletPrefab;
     [Header("Player Tracking")]
     public GameObject player;
     public float distance;
@@ -24,6 +22,11 @@ public class BossAI : MonoBehaviour
     [Header("Spawning Enemy Attack")]
     public GameObject minionType;
     public Transform spawnPoint;
+    [Header("Shooting Player")]
+    [SerializeField] protected float timer;
+    public int fireRate = 3;
+    public Transform firePoint;
+    public GameObject enemyBulletPrefab;
     public enum BossState
     {
         Idling,
@@ -41,10 +44,19 @@ public class BossAI : MonoBehaviour
     }
     void Update()
     {
+        Vector3 rotation = player.transform.position - transform.position;
+        float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;//Gets the angle in degrees
+        firePoint.rotation = Quaternion.Euler(0, 0, rotZ);//returns a rotation based on the line above.
+        timer += Time.deltaTime;
         distance = Vector2.Distance(transform.position, player.transform.position);//might not need
         if (isGrounded == true && !isStaggered)
         {
             JumpAttack();
+        }
+        if (timer > fireRate)
+        {
+            timer = 0;
+            Shoot();
         }
         
     }
