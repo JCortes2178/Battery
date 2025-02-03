@@ -40,7 +40,7 @@ public class BossAI : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         Collider2D bossCollider = GetComponent<Collider2D>();
         Collider2D playerCollider = player.GetComponent<Collider2D>();
-        Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
+        //Physics2D.IgnoreCollision(bossCollider, playerCollider, true);
     }
     void Update()
     {
@@ -120,25 +120,17 @@ public class BossAI : MonoBehaviour
             yield return new WaitForSeconds(jumpCooldown);
         }
     }
-    private void OnCollisionEnter2D(Collision2D hitInfo)
+    private void OnTriggerEnter2D(Collider2D  hitInfo)
     {
-        if (hitInfo.collider.CompareTag("Ground"))/*|| hitInfo.gameObject.layer == groundLayer*/
+        if (hitInfo.CompareTag("Ground"))/*|| hitInfo.gameObject.layer == groundLayer*/
         {
             isGrounded = true;
             _rigidbody.linearVelocity = Vector2.zero;
             Debug.Log(isGrounded);
         }
-        if (hitInfo.collider.CompareTag("Player"))
+        if (hitInfo.CompareTag("Player"))
         {
-            PlayerHealth playerHP = hitInfo.collider.GetComponentInChildren<PlayerHealth>();
-            if (playerHP != null)
-            {
-                playerHP.LoseHealth(damageDealt);
-            }
-            else
-            {
-                Debug.LogError("Error: Null Exception in Enemy.cs");
-            }
+            hitInfo.GetComponentInChildren<PlayerHealth>().LoseHealth(damageDealt);
         }
     }
 }

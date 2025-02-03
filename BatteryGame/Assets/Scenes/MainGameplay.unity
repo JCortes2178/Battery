@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 49224278}
   - component: {fileID: 49224280}
   - component: {fileID: 49224279}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309417388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MinionSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,8 @@ GameObject:
   - component: {fileID: 384689915}
   - component: {fileID: 384689919}
   - component: {fileID: 384689920}
-  m_Layer: 0
+  - component: {fileID: 384689921}
+  m_Layer: 7
   m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +614,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -788,23 +789,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeDistance: 0
   speed: 0
-  player: {fileID: 0}
+  player: {fileID: 2093069174}
   distance: 0
   jumpAmount: 10
   jumpCooldown: 3
-  damageDealt: 10
+  damageDealt: 50
   isGrounded: 0
   hitsUntilStaggered: 20
   hitCounter: 0
   staggerTime: 3
   isStaggered: 0
-  minionType: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  minionType: {fileID: 7691488209474883775, guid: bacefe46d618a204595710db36e03c90, type: 3}
+  spawnPoint: {fileID: 309417388}
   timer: 0
   fireRate: 3
-  firePoint: {fileID: 0}
-  enemyBulletPrefab: {fileID: 0}
+  firePoint: {fileID: 434147322}
+  enemyBulletPrefab: {fileID: 5734907551898499671, guid: 083dedbfa781a954aaae150666dab2fd, type: 3}
   currentState: 0
+--- !u!61 &384689921
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384689913}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &434147321
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434147322}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1456,7 +1503,7 @@ GameObject:
   - component: {fileID: 793730751}
   - component: {fileID: 793730750}
   - component: {fileID: 793730749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BossHealthbarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1426642102}
   - component: {fileID: 1426642103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthObject
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2432,7 +2479,7 @@ GameObject:
   - component: {fileID: 1446871199}
   - component: {fileID: 1446871201}
   - component: {fileID: 1446871200}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2609,7 +2656,7 @@ GameObject:
   - component: {fileID: 1526403564}
   - component: {fileID: 1526403566}
   - component: {fileID: 1526403565}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
