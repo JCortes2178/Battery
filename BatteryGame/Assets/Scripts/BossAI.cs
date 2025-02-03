@@ -46,10 +46,6 @@ public class BossAI : MonoBehaviour
         {
             JumpAttack();
         }
-        if (hitCounter >= hitsUntilStaggered)
-        {
-            Staggered();
-        }
         
     }
     //for when the boss spawns and is in between other states
@@ -65,9 +61,13 @@ public class BossAI : MonoBehaviour
             int attackType = Random.Range(0, 1);
         }
     }
-    void TakeDamage()
+    void TakeDamage(int damage)
     {
         hitCounter++;
+        if(hitCounter>= hitsUntilStaggered)
+        {
+            Staggered ();
+        }
     }
     void JumpAttack()
     {
