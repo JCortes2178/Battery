@@ -1,6 +1,5 @@
 using System;
 using NUnit.Framework;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
