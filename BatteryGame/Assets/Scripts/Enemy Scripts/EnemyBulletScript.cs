@@ -32,7 +32,12 @@ public class EnemyBulletScript : MonoBehaviour
             if (playerHP != null)
             {
                 playerHP.LoseHealth(bulletDamage);
-            }else
+            }
+            if(hitInfo.CompareTag("Ground"))
+            {
+                Destroy(gameObject);
+            }
+            else
             {
                 Debug.LogError("Error: Null Exception in Enemy.cs");
             }

@@ -28,9 +28,9 @@ public class BulletScript : MonoBehaviour
             enemyNPC.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
-        if (enemyNPC != null)
+        BossAI bossNPC = hitInfo.GetComponent<BossAI>();
+        if (bossNPC != null)
         {
-            BossAI bossNPC = hitInfo.GetComponent<BossAI>();
             enemyNPC.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
