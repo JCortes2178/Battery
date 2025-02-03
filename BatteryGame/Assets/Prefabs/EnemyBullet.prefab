@@ -169,3 +169,6 @@ MonoBehaviour:
   timeToDissipate: 2
   bulletDamage: 20
   _rigidbody2D: {fileID: 534612813662647730}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64

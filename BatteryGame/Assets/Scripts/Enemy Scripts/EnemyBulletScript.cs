@@ -7,6 +7,7 @@ public class EnemyBulletScript : MonoBehaviour
     [SerializeField] float bulletDamage = 100;
     //private GameObject player;
     public Rigidbody2D _rigidbody2D;
+    public LayerMask groundLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,14 +34,15 @@ public class EnemyBulletScript : MonoBehaviour
             {
                 playerHP.LoseHealth(bulletDamage);
             }
-            if(hitInfo.CompareTag("Ground"))
-            {
-                Destroy(gameObject);
-            }
             else
             {
                 Debug.LogError("Error: Null Exception in Enemy.cs");
             }
+
+        }
+        else if (hitInfo.name == "Tilemap")
+        {
+            Destroy(gameObject);
         }
     }
 }

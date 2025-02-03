@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
     [SerializeField] float timeToDissipate = 2f;
     [SerializeField] int bulletDamage = 100;
     public Rigidbody2D _rigidbody2D;
+    public LayerMask groundLayer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,12 +29,16 @@ public class BulletScript : MonoBehaviour
             enemyNPC.TakeDamage(bulletDamage);
             Destroy(gameObject);
         }
-        BossAI bossNPC = hitInfo.GetComponent<BossAI>();
+        else if (hitInfo.name == "Tilemap")
+        {
+            Destroy(gameObject);
+        }
+        /*BossAI bossNPC = hitInfo.GetComponent<BossAI>();
         if (bossNPC != null)
         {
             enemyNPC.TakeDamage(bulletDamage);
             Destroy(gameObject);
-        }
-        
+        }*/
+
     }
 }
